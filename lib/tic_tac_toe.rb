@@ -30,8 +30,8 @@ def display_board(board)
 end
 
 def valid_move?(board, input)
-  input=input.to_i
-  input.between?(0,8) && !position_taken?(board, input)
+
+  input.between?(0,8) && !position_taken?(board, input.to_i)
 end
 
 def won?(board)
