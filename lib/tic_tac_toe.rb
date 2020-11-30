@@ -31,8 +31,6 @@ end
 
 def valid_move?(board, input)
   input=input.to_i
-  puts input
-  puts !position_taken?(board, input)
   input.between?(0,8) && !position_taken?(board, input)
 end
 
