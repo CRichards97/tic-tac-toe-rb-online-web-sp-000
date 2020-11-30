@@ -64,6 +64,10 @@ def turn(board)
   end
 end
 
+def input_to_index(user_input)
+    user_input.to_i - 1
+end
+
 def position_taken?(board, location)
   !(board[location].nil? || board[location] == " ")
   # Creates a stop on RSpec
