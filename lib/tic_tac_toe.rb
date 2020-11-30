@@ -57,10 +57,11 @@ def turn(board)
   puts "Please enter 1-9:"
   input = gets.strip
   if valid_move?(board, input)
+    move(board, input, current_player(board))
+    display_board(board)
+  else
     turn(board)
   end
-  move(board, input, current_player(board))
-  display_board(board)
 end
 
 def position_taken?(board, location)
